@@ -25,10 +25,11 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->productName(),
+            'name' => $this->faker->words(3, true), // Ex : "Wireless Bluetooth Speaker"
             'description' => $this->faker->paragraph(),
             'price' => $this->faker->randomFloat(2, 5, 1000),
             'quantity' => $this->faker->numberBetween(0, 100),
         ];
     }
+
 }
